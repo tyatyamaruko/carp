@@ -13,7 +13,9 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'CARP'),
+
+    'sub_title' => env('APP_SUB_TITLE', '車好きの名刺交換'),
 
     /*
     |--------------------------------------------------------------------------
