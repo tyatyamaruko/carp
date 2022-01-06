@@ -11286,3 +11286,64 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+header {
+  height: 60px;
+}
+
+main {
+  height: calc(100% - 170px);
+}
+
+footer {
+  height: 60px;
+}
+
+* {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Sawarabi Mincho";
+}
+
+.sample-card {
+  width: 50%;
+  padding: 10px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+.sample-card__image-name {
+  display: flex;
+}
+.sample-card__profile-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+.sample-card__profile-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.sample-card__name {
+  margin-left: 20px;
+  line-height: 100px;
+}
+.sample-card__infomation {
+  margin-top: 30px;
+}
+.sample-card__infomation table {
+  width: 100%;
+}
+.sample-card__infomation table tr th, .sample-card__infomation table tr td {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.welcome-message {
+  margin-top: 100px;
+}
+.welcome-message h1, .welcome-message .h1, .welcome-message h3, .welcome-message .h3, .welcome-message p {
+  text-align: center;
+  color: #fff;
+}

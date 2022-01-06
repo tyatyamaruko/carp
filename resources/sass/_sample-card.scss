@@ -1,0 +1,43 @@
+.sample-card {
+    width: 50%;
+    padding: 10px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 15px;
+
+    &__image-name {
+        display: flex;
+    }
+
+    &__profile-image {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__name {
+        margin-left: 20px;
+        line-height: 100px;
+    }
+
+    &__infomation {
+        margin-top: 30px;
+        table {
+            width: 100%;
+
+            tr {
+                th, td {
+                    padding: 5px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
