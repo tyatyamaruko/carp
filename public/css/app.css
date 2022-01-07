@@ -11304,6 +11304,10 @@ footer {
   font-family: "Sawarabi Mincho";
 }
 
+body {
+  background: #1a202c;
+}
+
 .get-started {
   width: 50%;
   margin: 0 auto;
