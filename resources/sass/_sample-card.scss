@@ -6,6 +6,10 @@
     margin-top: 15px;
     border-radius: 15px;
 
+    @media screen and (max-width: $sp-size) {
+        width: 90%;
+    }
+
     &__image-name {
         display: flex;
     }

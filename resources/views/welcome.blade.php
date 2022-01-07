@@ -414,9 +414,6 @@
 </head>
 
 <body class="antialiased">
-    {{-- <header class="relative flex items-top justify-center sm:items-center py-4 sm:pt-0">
-
-    </header> --}}
 
     <main style="display: flex; flex-direction: column; justify-content:center;">
 
@@ -469,7 +466,7 @@
             </div><!-- /.content -->
         </div><!-- /.sample-card -->
 
-        <div class="get-started w-50 mx-auto mt-5">
+        <div class="get-started">
             @if (Route::has('login'))
                 <div class="px-6 mt-3 sm:block d-flex justify-content-around">
                     @auth
@@ -488,9 +485,6 @@
         </div><!-- /.get-started -->
     </main>
 
-    <footer>
-
-    </footer>
 </body>
 
 </html>

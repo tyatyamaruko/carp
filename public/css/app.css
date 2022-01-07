@@ -11304,6 +11304,17 @@ footer {
   font-family: "Sawarabi Mincho";
 }
 
+.get-started {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+@media screen and (max-width: 799px) {
+  .get-started {
+    width: 100%;
+  }
+}
+
 .sample-card {
   width: 50%;
   padding: 10px;
@@ -11311,6 +11322,11 @@ footer {
   margin: 0 auto;
   margin-top: 15px;
   border-radius: 15px;
+}
+@media screen and (max-width: 799px) {
+  .sample-card {
+    width: 90%;
+  }
 }
 .sample-card__image-name {
   display: flex;
@@ -11346,4 +11362,11 @@ footer {
 .welcome-message h1, .welcome-message .h1, .welcome-message h3, .welcome-message .h3, .welcome-message p {
   text-align: center;
   color: #fff;
+}
+@media screen and (max-width: 799px) {
+  .welcome-message {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 150px;
+  }
 }
