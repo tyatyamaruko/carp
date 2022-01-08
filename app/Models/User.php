@@ -22,17 +22,12 @@ class User extends Authenticatable
         'email',
         'password',
         'car_name',
-        'hogetown',
+        'hometown',
         'birthday',
         'blood_type',
         'point',
     ];
-    // $table->string("car_name");
-    //         $table->string("hometown");
-    //         $table->string("birthday");
-    //         $table->string("blood_type");
-    //         $table->string("point")->nullable();
-
+    
     /**
      * The attributes that should be hidden for serialization.
      *
