@@ -141,6 +141,16 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => "ニックネーム",
+        'car_name' => "車名",
+        'hometown' => "出身",
+        'birthday' => "誕生日",
+        'blood_type' => "血液型",
+        'point' => "こだわりポイント",
+        'email' => "メールアドレス",
+        'password' => "パスワード",
+        'password_confirmation' => "パスワード",
+    ],
 
 ];
