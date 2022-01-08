@@ -11319,7 +11319,7 @@ body {
   }
 }
 
-.sample-card {
+.user-card {
   width: 50%;
   padding: 10px;
   background: #fff;
@@ -11328,34 +11328,37 @@ body {
   border-radius: 15px;
 }
 @media screen and (max-width: 799px) {
-  .sample-card {
+  .user-card {
     width: 90%;
   }
 }
-.sample-card__image-name {
+.user-card__image-name {
   display: flex;
 }
-.sample-card__profile-image {
+.user-card__profile-image {
   height: 100px;
   width: 100px;
   border-radius: 50px;
 }
-.sample-card__profile-image img {
+.user-card__profile-image img {
   height: 100%;
   width: 100%;
   border-radius: 50%;
 }
-.sample-card__name {
+.user-card__name {
   margin-left: 20px;
   line-height: 100px;
 }
-.sample-card__infomation {
+.user-card__name h3, .user-card__name .h3 {
+  line-height: 100px;
+}
+.user-card__infomation {
   margin-top: 30px;
 }
-.sample-card__infomation table {
+.user-card__infomation table {
   width: 100%;
 }
-.sample-card__infomation table tr th, .sample-card__infomation table tr td {
+.user-card__infomation table tr th, .user-card__infomation table tr td {
   padding: 5px;
   font-size: 18px;
 }
