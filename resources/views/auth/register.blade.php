@@ -8,8 +8,16 @@
                 <div class="card-header">新規登録</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" enctype="multipart/form-data" action="{{ route('register') }}">
                         @csrf
+
+                        <div class="row mb-3">
+                            <label for="profile_image" class="col-md-4 col-form-label text-md-end">プロフィール画像</label>
+
+                            <div class="col-md-6">
+                                <input type="file" name="profile_img" id="">
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">ニックネーム</label>
