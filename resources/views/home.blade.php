@@ -7,7 +7,7 @@
                 <div class="content">
                     <div class="user-card__image-name">
                         <div class="user-card__profile-image">
-                            <img src="{{ asset('storage/profile_img/profile_img.jpeg')}}" alt="">
+                            <img src="{{ asset('storage/' . Auth::user()->profile_path)}}" alt="">
                         </div><!-- /.profile-image -->
                         <div class="user-card__name">
                             <h3>{{ Auth::user()->name }}</h3>
