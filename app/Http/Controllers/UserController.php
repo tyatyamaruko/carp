@@ -6,6 +6,7 @@ use App\Http\Requests\UserInfoRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class UserController extends Controller
 {
@@ -52,5 +53,9 @@ class UserController extends Controller
     public function detail($id) {
         $user = User::find($id);
         return view('detail', ['user' => $user]);
+    }
+
+    public function qrcode() {
+        return view('qrcode');
     }
 }

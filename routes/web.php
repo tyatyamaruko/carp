@@ -30,3 +30,5 @@ Route::get('/search', [UserController::class, 'search'])->name('search');
 Route::get('/search/{name?}', [UserController::class, 'search'])->name('search.name');
 
 Route::get('/detail/{id}', [UserController::class, 'detail'])->name('detail');
+
+Route::get('/qrcode', [UserController::class, 'qrcode'])->name('qrcode');

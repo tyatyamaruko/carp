@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     {{ config('app.name', 'CARP') }}
                     <small class="text-muted">
                         {{ config('app.sub_title', '車好きの名刺交換') }}
@@ -66,7 +66,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('update') }}">
+                                        <a class="dropdown-item" href="{{ route('qrcode') }}">
                                             QRコードを表示
                                         </a>
                                     </li>
