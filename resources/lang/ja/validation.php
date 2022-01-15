@@ -146,6 +146,8 @@ return [
         'car_name' => "車名",
         'hometown' => "出身",
         'birthday' => "誕生日",
+        'year' => "誕生年",
+        'month' => "誕生月",
         'blood_type' => "血液型",
         'point' => "こだわりポイント",
         'email' => "メールアドレス",

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+    Route::get('/update', [UserController::class, 'index'])->name('update');
+    Route::post('/modify', [UserController::class, 'modify'])->name('modify');
+
+    Route::get('/search', [UserController::class, 'search'])->name('search');
+    Route::get('/search/{name?}', [UserController::class, 'search'])->name('search.name');
+
+    Route::get('/detail/{id}', [UserController::class, 'detail'])->name('detail');
+
+    Route::get('/qrcode', [UserController::class, 'qrcode'])->name('qrcode');
+
+    Route::post('/following', [UserController::class, 'following'])->name('following');
+    Route::post('/unfollowing', [UserController::class, 'unfollowing'])->name('unfollowing');
+    Route::get('/follower', [UserController::class, 'follower'])->name('follower.show');
+});
+
