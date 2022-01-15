@@ -6,6 +6,10 @@
     margin-top: 15px;
     border-radius: 15px;
 
+    @media screen and (max-width: $tablet-size) {
+        width: 75%;
+    }
+
     @media screen and (max-width: $sp-size) {
         width: 90%;
     }
@@ -29,8 +33,37 @@
     &__name {
         margin-left: 20px;
         line-height: 100px;
+        width: calc(100% - 250px);
 
         h3 {
+            line-height: 100px;
+        }
+    }
+
+    &__follow-btn {
+        width: 150px;
+        text-align: center;
+
+        input[type="submit"] {
+            margin-top: 30px;
+            border-radius: 20px;
+            color: #fff;
+            border: none;
+            padding: 3px 10px;
+        }
+        &__follow {
+            background: rgb(20, 165, 220);
+        }
+        &__unfollow {
+            background: rgb(235, 60, 75);
+        }
+    }
+
+    &__show-follow {
+        width: 150px;
+        text-align: center;
+        
+        a {
             line-height: 100px;
         }
     }
@@ -44,6 +77,9 @@
                 th, td {
                     padding: 5px;
                     font-size: 18px;
+                }
+                th {
+                    width: 40%;
                 }
             }
         }

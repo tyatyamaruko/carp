@@ -11319,6 +11319,35 @@ body {
   }
 }
 
+.no-result {
+  margin-top: 30px;
+}
+.no-result h2, .no-result .h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.profile_image_block {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background: #1a202c;
+  color: #1a202c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile_image_block #profile_image {
+  display: none;
+}
+
+#year, #month {
+  text-align: right;
+}
+
+select {
+  text-align: right;
+}
+
 .user-card {
   width: 50%;
   padding: 10px;
@@ -11326,6 +11355,11 @@ body {
   margin: 0 auto;
   margin-top: 15px;
   border-radius: 15px;
+}
+@media screen and (max-width: 999px) {
+  .user-card {
+    width: 75%;
+  }
 }
 @media screen and (max-width: 799px) {
   .user-card {
@@ -11348,8 +11382,33 @@ body {
 .user-card__name {
   margin-left: 20px;
   line-height: 100px;
+  width: calc(100% - 250px);
 }
 .user-card__name h3, .user-card__name .h3 {
+  line-height: 100px;
+}
+.user-card__follow-btn {
+  width: 150px;
+  text-align: center;
+}
+.user-card__follow-btn input[type=submit] {
+  margin-top: 30px;
+  border-radius: 20px;
+  color: #fff;
+  border: none;
+  padding: 3px 10px;
+}
+.user-card__follow-btn__follow {
+  background: #14a5dc;
+}
+.user-card__follow-btn__unfollow {
+  background: #eb3c4b;
+}
+.user-card__show-follow {
+  width: 150px;
+  text-align: center;
+}
+.user-card__show-follow a {
   line-height: 100px;
 }
 .user-card__infomation {
@@ -11361,6 +11420,9 @@ body {
 .user-card__infomation table tr th, .user-card__infomation table tr td {
   padding: 5px;
   font-size: 18px;
+}
+.user-card__infomation table tr th {
+  width: 40%;
 }
 
 .welcome-message {
@@ -11376,4 +11438,27 @@ body {
     margin: 0 auto;
     margin-top: 150px;
   }
+}
+
+.search-box {
+  text-align: center;
+  margin: 20px 0;
+}
+.search-box__username-input {
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+}
+.search-box__search-btn {
+  padding: 5px 10px;
+  background: #4632d7;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.qr-box {
+  margin: 50px auto 0;
+}
+.qr-box__code {
+  text-align: center;
 }

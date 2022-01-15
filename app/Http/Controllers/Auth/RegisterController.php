@@ -50,12 +50,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'profile_img' => ['image', 'mimes:jpeg,png,jpg,gif'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:6', 'confirmed'],
             'car_name' => ['required', 'string'],
-            'birthday' => ['required', 'string'],
-            'blood_type' => ['required', 'string'],
+            'year' => ['required'],
+            'month' => ['required'],
+            'blood_type' => ['required', 'regex:/(A|B|AB|O)/'],
             'hometown' => ['required', 'string'],
         ]);
     }
@@ -68,13 +70,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // dd($data);
+        if(isset($data["profile_img"])){
+            $img = $data["profile_img"];
+           $profile_path = $img->storeAs("profile_img", $data['email'] . ".jpeg", "public");
+        } else {
+            $profile_path = "profile_img/no-image.png";
+        }
         return User::create([
+            'profile_path' => $profile_path,
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'car_name' => $data["car_name"],
-            'birthday' => $data["birthday"],
+            'year' => $data["year"],
+            'month' => $data["month"],
             'blood_type' => $data["blood_type"],
             'hometown' => $data["hometown"],
             'point' => $data["point"],
