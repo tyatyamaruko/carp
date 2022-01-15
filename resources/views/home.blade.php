@@ -12,6 +12,9 @@
                         <div class="user-card__name">
                             <h3>{{ Auth::user()->name }}</h3>
                         </div><!-- /.name -->
+                        <div class="user-card__show-follow">
+                            <a href="{{ route('follower.show') }}">フォロー中</a>
+                        </div>
                     </div><!-- /.image-name -->
 
                     <div class="user-card__infomation">

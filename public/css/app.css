@@ -11335,6 +11335,11 @@ body {
   margin-top: 15px;
   border-radius: 15px;
 }
+@media screen and (max-width: 999px) {
+  .user-card {
+    width: 75%;
+  }
+}
 @media screen and (max-width: 799px) {
   .user-card {
     width: 90%;
@@ -11356,8 +11361,33 @@ body {
 .user-card__name {
   margin-left: 20px;
   line-height: 100px;
+  width: calc(100% - 250px);
 }
 .user-card__name h3, .user-card__name .h3 {
+  line-height: 100px;
+}
+.user-card__follow-btn {
+  width: 150px;
+  text-align: center;
+}
+.user-card__follow-btn input[type=submit] {
+  margin-top: 30px;
+  border-radius: 20px;
+  color: #fff;
+  border: none;
+  padding: 3px 10px;
+}
+.user-card__follow-btn__follow {
+  background: #14a5dc;
+}
+.user-card__follow-btn__unfollow {
+  background: #eb3c4b;
+}
+.user-card__show-follow {
+  width: 150px;
+  text-align: center;
+}
+.user-card__show-follow a {
   line-height: 100px;
 }
 .user-card__infomation {
@@ -11369,6 +11399,9 @@ body {
 .user-card__infomation table tr th, .user-card__infomation table tr td {
   padding: 5px;
   font-size: 18px;
+}
+.user-card__infomation table tr th {
+  width: 40%;
 }
 
 .welcome-message {

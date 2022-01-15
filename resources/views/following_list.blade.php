@@ -3,14 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <form action="{{ route('search.name') }}" method="get">
-                @csrf
-                <div class="search-box">
-                    <input type="text" placeholder="ユーザー名" name="name" value="{{$query}}" class="search-box__username-input" id="">
-                    <input type="submit" class="search-box__search-btn" value="検索">
-                </div>
-            </form>
-            @isset($users)
+            @if(count($users) > 0)
                 <ul class="userlist-box">
                     @foreach ($users as $user)
                         <li class="userlist-box__list">
@@ -31,9 +24,9 @@
                 </ul>
             @else
                 <div class="no-result">
-                    <h2>ユーザーが見つかりませんでした</h2>
+                    <h2>フォロー中のユーザーはいません</h2>
                 </div>
-            @endisset
+            @endif
         </div>
     </div>
 @endsection

@@ -32,3 +32,7 @@ Route::get('/search/{name?}', [UserController::class, 'search'])->name('search.n
 Route::get('/detail/{id}', [UserController::class, 'detail'])->name('detail');
 
 Route::get('/qrcode', [UserController::class, 'qrcode'])->name('qrcode');
+
+Route::post('/following', [UserController::class, 'following'])->name('following');
+Route::post('/unfollowing', [UserController::class, 'unfollowing'])->name('unfollowing');
+Route::get('/follower', [UserController::class, 'follower'])->name('follower.show');

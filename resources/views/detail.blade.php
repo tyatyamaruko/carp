@@ -12,6 +12,23 @@
                         <div class="user-card__name">
                             <h3>{{ $user->name }}</h3>
                         </div><!-- /.name -->
+                        @isset($following)
+                            <div class="user-card__follow-btn">
+                                <form action=" {{route('unfollowing')}} " method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $user->id }}">
+                                    <input type="submit" class="user-card__follow-btn__unfollow" value="フォロー解除">
+                                </form>
+                            </div>
+                        @else
+                            <div class="user-card__follow-btn">
+                                <form action=" {{route('following')}} " method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $user->id }}">
+                                    <input type="submit" class="user-card__follow-btn__follow" value="フォロー">
+                                </form>
+                            </div>
+                        @endisset
                     </div><!-- /.image-name -->
 
                     <div class="user-card__infomation">
