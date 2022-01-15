@@ -72,7 +72,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="{{ route('update') }}">
-                                            プロフィール画像編集
+                                            プロフィール編集
                                         </a>
                                     </li>
 
