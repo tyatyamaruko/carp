@@ -14,7 +14,7 @@
                         <div class="row mb-3">
                             <label for="profile_image" class="col-md-4 col-form-label text-md-end">プロフィール画像</label>
                             <div class="col-md-6">
-                                <input type="file" name="profile_img" id="">
+                                <input type="file" name="profile_img" value="{{ asset('storage/'.Auth::user()->profile_path) }}" id="">
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -55,7 +55,16 @@
                             <label for="hometown" class="col-md-4 col-form-label text-md-end">出身</label>
 
                             <div class="col-md-6">
-                                <input id="hometown" type="text" class="form-control @error('hometown') is-invalid @enderror" name="hometown" value="{{ old('hometown') ?: Auth::user()->hometown }}" required autocomplete="hometown">
+                                <select name="hometown" class="form-control @error('hometown') is-invalid @enderror" id="hometown">
+                                    @foreach(config('const.Prefs') as $pref)
+                                        @if ($pref == Auth::user()->hometown) 
+                                            <option value="{{$pref}}" selected>{{$pref}}</option>
+                                        @else
+                                            <option value="{{$pref}}">{{$pref}}</option>
+                                        @endif
+                                        <option value="{{$pref}}">{{$pref}}</option>
+                                    @endforeach
+                                </select>
 
                                 @error('hometown')
                                     <span class="invalid-feedback" role="alert">
@@ -66,12 +75,41 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="birthday" class="col-md-4 col-form-label text-md-end">誕生日</label>
+                            <label for="year" class="col-md-4 col-form-label text-md-end">誕生年</label>
 
                             <div class="col-md-6">
-                                <input id="birthday" type="text" class="form-control @error('birthday') is-invalid @enderror" name="birthday" value="{{ old('birthday') ?: Auth::user()->birthday }}" required autocomplete="birthday">
+                                <select name="year" class="form-control @error('year') is-invalid @enderror" id="year">
+                                    @foreach(range(1900, date("Y")) as $year)
+                                    @if($year == Auth::user()->year)
+                                        <option value="{{$year}}" selected>{{$year}}年</option>
+                                    @else
+                                        <option value="{{$year}}">{{$year}}年</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                                @error('year')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
-                                @error('birthday')
+                        <div class="row mb-3">
+                            <label for="month" class="col-md-4 col-form-label text-md-end">誕生月</label>
+
+                            <div class="col-md-6">
+                                <select name="month" class="form-control @error('month') is-invalid @enderror" id="month">
+                                    @foreach(range(1, 12) as $month)
+                                        @if ($month == Auth::user()->month) 
+                                            <option value="{{$month}}" selected>{{$month}}</option>
+                                        @else
+                                            <option value="{{$month}}">{{$month}}</option>
+                                        @endif
+                                        <option value="{{$month}}">{{$month}}月</option>
+                                    @endforeach
+                                </select>
+                                @error('month')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -83,7 +121,12 @@
                             <label for="blood_type" class="col-md-4 col-form-label text-md-end">血液型</label>
 
                             <div class="col-md-6">
-                                <input id="blood_type" type="text" class="form-control @error('blood_type') is-invalid @enderror" name="blood_type" value="{{ old('blood_type') ?: Auth::user()->blood_type }}" required autocomplete="blood_type">
+                                <select name="blood_type" class="form-control @error('blood_type') is-invalid @enderror" id="blood_type">
+                                    <option value="A">A型</option>
+                                    <option value="B">B型</option>
+                                    <option value="AB">AB型</option>
+                                    <option value="O">O型</option>
+                                </select>
 
                                 @error('blood_type')
                                     <span class="invalid-feedback" role="alert">

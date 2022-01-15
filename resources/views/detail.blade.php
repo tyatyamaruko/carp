@@ -42,12 +42,12 @@
                                 <td>{{ $user->hometown }}</td>
                             </tr>
                             <tr>
-                                <th>誕生日</th>
-                                <td>{{ $user->birthday }}</td>
+                                <th>誕生年月</th>
+                                <td>{{ $user->year }}年{{ $user->month }}月</td>
                             </tr>
                             <tr>
                                 <th>血液型</th>
-                                <td>{{ $user->blood_type }}</td>
+                                <td>{{ $user->blood_type }}型</td>
                             </tr>
                             <tr>
                                 <th>こだわりポイント</th>

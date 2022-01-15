@@ -28,12 +28,12 @@
                                 <td>{{ Auth::user()->hometown }}</td>
                             </tr>
                             <tr>
-                                <th>誕生日</th>
-                                <td>{{ Auth::user()->birthday }}</td>
+                                <th>誕生年月</th>
+                                <td>{{ Auth::user()->year }}年{{ Auth::user()->month }}月</td>
                             </tr>
                             <tr>
                                 <th>血液型</th>
-                                <td>{{ Auth::user()->blood_type }}</td>
+                                <td>{{ Auth::user()->blood_type }}型</td>
                             </tr>
                             <tr>
                                 <th>こだわりポイント</th>

@@ -27,8 +27,8 @@ class UserInfoRequest extends FormRequest
             'profile_img' => ['image', 'mimes:jpeg,png,jpg,gif'],
             'name' => ['required', 'string', 'max:255'],
             'car_name' => ['required', 'string'],
-            'birthday' => ['required', 'string'],
-            'blood_type' => ['required', 'string'],
+            'year' => ['required'],
+            'month' => ['required'],
             'hometown' => ['required', 'string'],
         ];
     }

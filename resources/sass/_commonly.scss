@@ -39,3 +39,24 @@ body {
     }
 }
 
+.profile_image_block {
+    display: block;
+    height: 100px;
+    width: 100px;
+    background: #1a202c;
+    color: #1a202c;
+    border-radius: 50%;
+    cursor: pointer;
+    #profile_image {
+        display: none;
+    }
+}
+
+
+#year, #month {
+    text-align: right;
+}
+
+select {
+    text-align: right;
+}

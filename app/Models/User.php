@@ -24,7 +24,8 @@ class User extends Authenticatable
         'password',
         'car_name',
         'hometown',
-        'birthday',
+        'year',
+        'month',
         'blood_type',
         'point',
     ];

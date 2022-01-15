@@ -22,7 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string("car_name");
             $table->string("hometown")->default("秘密");
-            $table->string("birthday");
+            $table->string("year");
+            $table->string("month");
             $table->string("blood_type");
             $table->string("point")->nullable();
             $table->rememberToken();

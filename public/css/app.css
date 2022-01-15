@@ -11327,6 +11327,27 @@ body {
   text-align: center;
 }
 
+.profile_image_block {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background: #1a202c;
+  color: #1a202c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile_image_block #profile_image {
+  display: none;
+}
+
+#year, #month {
+  text-align: right;
+}
+
+select {
+  text-align: right;
+}
+
 .user-card {
   width: 50%;
   padding: 10px;
