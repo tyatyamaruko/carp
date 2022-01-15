@@ -1,0 +1,17 @@
+.search-box {
+    text-align: center;
+    margin: 20px 0;
+
+    &__username-input {
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    &__search-btn {
+        padding: 5px 10px;
+        background: rgb(70, 50, 215);
+        color: #fff;
+        border-radius: 10px;
+    }
+}

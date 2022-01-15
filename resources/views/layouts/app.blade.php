@@ -61,6 +61,16 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li>
+                                        <a class="dropdown-item" href="{{ route('search') }}">
+                                            ユーザーを検索
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('update') }}">
+                                            QRコードを表示
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a class="dropdown-item" href="{{ route('update') }}">
                                             プロフィール画像編集
                                         </a>

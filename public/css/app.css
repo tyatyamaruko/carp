@@ -11319,6 +11319,14 @@ body {
   }
 }
 
+.no-result {
+  margin-top: 30px;
+}
+.no-result h2, .no-result .h2 {
+  color: #fff;
+  text-align: center;
+}
+
 .user-card {
   width: 50%;
   padding: 10px;
@@ -11376,4 +11384,20 @@ body {
     margin: 0 auto;
     margin-top: 150px;
   }
+}
+
+.search-box {
+  text-align: center;
+  margin: 20px 0;
+}
+.search-box__username-input {
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+}
+.search-box__search-btn {
+  padding: 5px 10px;
+  background: #4632d7;
+  color: #fff;
+  border-radius: 10px;
 }

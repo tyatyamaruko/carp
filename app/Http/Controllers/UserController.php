@@ -37,4 +37,20 @@ class UserController extends Controller
         $user->save();
         return redirect()->route('home');
     }
+
+    public function search(Request $request) {
+        // dd($request->name);
+        if ($name = $request->name) {
+            $users = User::where('name', $name)->get();
+            // dd($users);
+        } else {
+            $users = User::all();
+        }
+        return view('search', ["query" => $name, "users" => $users]);
+    }
+
+    public function detail($id) {
+        $user = User::find($id);
+        return view('detail', ['user' => $user]);
+    }
 }

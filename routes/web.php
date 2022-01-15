@@ -25,3 +25,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/update', [UserController::class, 'index'])->name('update');
 Route::post('/modify', [UserController::class, 'modify'])->name('modify');
+
+Route::get('/search', [UserController::class, 'search'])->name('search');
+Route::get('/search/{name?}', [UserController::class, 'search'])->name('search.name');
+
+Route::get('/detail/{id}', [UserController::class, 'detail'])->name('detail');
